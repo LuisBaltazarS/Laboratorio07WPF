@@ -40,25 +40,40 @@ namespace DemoCapas
         {
 
             BClient bussiness = new BClient();
-            var client = bussiness.GetById(int.Parse(txtSearchId.Text));
 
-            if (client.Count > 0)
+            if (txtSearchId.Text == "")
             {
 
-                txtAddress.Text = client[0].Address;
-                txtPhone.Text = client[0].Phone;
+                MessageBox.Show("Porfavor indique el Id", "Advertencia");
 
             }
             else
             {
 
-                txtSearchId.Text = "";
-                txtAddress.Text = "";
-                txtPhone.Text = "";
-                MessageBox.Show("No se ha encontrado a ningun cliente",
-                    "Advertencia");
+                var client = bussiness.GetById(int.Parse(txtSearchId.Text));
+
+                if (client.Count > 0)
+                {
+
+                    txtAddress.Text = client[0].Address;
+                    txtPhone.Text = client[0].Phone;
+
+                }
+                else
+                {
+
+                    txtSearchId.Text = "";
+                    txtAddress.Text = "";
+                    txtPhone.Text = "";
+                    MessageBox.Show("No se ha encontrado a ningun cliente",
+                        "Advertencia");
+
+                }
 
             }
+
+            
+            
 
         }
 

@@ -58,35 +58,46 @@ namespace DemoCapas
 
             try
             {
+
                 DClient client = new DClient();
 
-                var result = MessageBox.Show("¿Esta seguro de querer eliminar?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
-
-                switch (result)
+                if (txtSearchId.Text == "")
                 {
-                    case MessageBoxResult.Yes:
 
-                        client.DeleteClient(
+                    MessageBox.Show("Porfavor Indique el Id", "Advertencia");
 
-                            int.Parse(txtSearchId.Text)
-
-                        );
-
-                        MessageBox.Show("Cliente eliminado correctamente",
-                            "Advertencia");
-
-                        txtSearchId.Text = "";
-                        txtName.Text = "";
-                        txtPhone.Text = "";
-                        txtAddress.Text = "";
-
-                        break;
-                    case MessageBoxResult.No:
-                        MessageBox.Show("Operación Cancelada",
-                            "Advertencia");
-                        break;
                 }
+                else
+                {
 
+                    var result = MessageBox.Show("¿Esta seguro de querer eliminar?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+
+                    switch (result)
+                    {
+                        case MessageBoxResult.Yes:
+
+                            client.DeleteClient(
+
+                                int.Parse(txtSearchId.Text)
+
+                            );
+
+                            MessageBox.Show("Cliente eliminado correctamente",
+                                "Advertencia");
+
+                            txtSearchId.Text = "";
+                            txtName.Text = "";
+                            txtPhone.Text = "";
+                            txtAddress.Text = "";
+
+                            break;
+                        case MessageBoxResult.No:
+                            MessageBox.Show("Operación Cancelada",
+                                "Advertencia");
+                            break;
+                    }
+
+                }
 
             }
             catch (Exception ex)
@@ -95,8 +106,6 @@ namespace DemoCapas
                 MessageBox.Show("Error", ex.Message);
 
             }
-
-
 
         }
 
