@@ -13,13 +13,13 @@
         <Button Content="Buscar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="25" Margin="220,20,0,0" Click="SearchClientId"/>
 
         <Label Content="Client's Name:" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="150,60,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="150,60,0,0" VerticalAlignment="Top" Width="300" IsEnabled="False"/>
 
         <Label Content="Client's Address:" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="300" IsEnabled="False"/>
 
         <Label Content="Client's Phone" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Margin="150,140,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Margin="150,140,0,0" VerticalAlignment="Top" Width="300" IsEnabled="False"/>
 
         <Button Content="Eliminar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" Margin="30,180,0,0" Click="Button_Delete"/>
         <Button Content="Retornar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" Margin="150,180,0,0" Click="Return"/>

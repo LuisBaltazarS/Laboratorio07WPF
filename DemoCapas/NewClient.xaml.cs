@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using Bussiness;
+using Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace DemoCapas
 
             try
             {
-                DClient client = new DClient();
+                BClient client = new BClient();
                 client.InsertClient(
                     txtName.Text,
                     txtAddress.Text,

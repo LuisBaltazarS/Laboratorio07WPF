@@ -57,11 +57,12 @@ namespace DemoCapas
 
                     txtAddress.Text = client[0].Address;
                     txtPhone.Text = client[0].Phone;
+                    txtName.Text = client[0].Name;
 
                 }
                 else
                 {
-
+                    txtName.Text = "";
                     txtSearchId.Text = "";
                     txtAddress.Text = "";
                     txtPhone.Text = "";
@@ -72,9 +73,6 @@ namespace DemoCapas
 
             }
 
-            
-            
-
         }
 
         public void Botton_Update(object sender, RoutedEventArgs e)
@@ -82,7 +80,7 @@ namespace DemoCapas
 
             try
             {
-                DClient client = new DClient();
+                BClient client = new BClient();
                 client.UpdateClient(
                     int.Parse(txtSearchId.Text),
                     txtAddress.Text,

@@ -11,6 +11,20 @@ namespace Bussiness
     public class BClient
     {
 
+        private DClient clientData;
+
+        public BClient() 
+        {
+            clientData = new DClient();
+        }
+
+        public List<Client> ListClients()
+        {
+
+            return clientData.ListarClientes();
+
+        }
+
         public List<Client> GetByName(string Name)
         {
 
@@ -58,6 +72,32 @@ namespace Bussiness
             }
 
             return result;
+
+        }
+
+        public void InsertClient(string name, string address, string phone)
+        {
+
+            clientData.InsertClient(name, address, phone);
+
+        }
+
+        public void DeleteClient(int id)
+        {
+            clientData.DeleteClient(id);
+        }
+
+        public void ActivateClient(int id)
+        {
+
+            clientData.ActivateClient(id);
+
+        }
+
+        public void UpdateClient(int id, string address, string phone)
+        {
+
+            clientData.UpdateClient(id, address, phone);
 
         }
 

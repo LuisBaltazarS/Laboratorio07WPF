@@ -61,9 +61,9 @@ namespace DemoCapas
         private void LoadClients()
         {
 
-            DClient clients = new DClient();
+            BClient clients = new BClient();
 
-            foreach (var client in clients.ListarClientes())
+            foreach (var client in clients.ListClients())
             {
 
                 listClients.Add(client); 

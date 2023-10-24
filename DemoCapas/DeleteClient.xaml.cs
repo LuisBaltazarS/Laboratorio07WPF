@@ -59,7 +59,7 @@ namespace DemoCapas
             try
             {
 
-                DClient client = new DClient();
+                BClient client = new BClient();
 
                 if (txtSearchId.Text == "")
                 {
